@@ -1,0 +1,100 @@
+Esta calculadora cumple con todos los requisitos, pero no se puede ejecutar e una pagina online, porque da unos errores
+
+
+
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int Num1, Num2, Result, opcion, salir;
+	cout <<"\n"<<endl;
+	cout <<" Escribir\n";
+   cout <<" 1 para realizar una SUMA,\n 2 para realizar una RESTA,\n 3 para realizar una DIVICION,\n 4 para realizar una MULTIPLICACION\n"<<endl;
+   cout <<" 5 para SALIR"<<endl;
+   cout <<"\n Que desea realizar? ";
+
+   cin >> opcion;
+  
+    if(opcion < 1)
+ {
+    cout <<"\n solo puede seleccionar 1, 2, 3, 4"<<endl;
+}
+else
+   if(opcion > 5)
+   {
+    cout <<"\n solo puede seleccionar 1, 2, 3, 4"<<endl;
+}
+else
+      if(opcion==1)
+  {
+  system("cls");
+   cout <<"\n Usted realizara una SUMA"<<endl;
+   cout <<"\n Ingrese un numero:";
+   cin>> Num1;
+   cout <<"\n Ingrese otro numero:";
+   cin >> Num2;
+   Result = Num1 + Num2;
+   cout<<"\n La respuesta es: "<<Result<<endl;
+}
+   else
+      if(opcion==2)
+      {
+      	system("cls");
+   cout <<"\n Usted realizara una RESTA"<<endl;
+   cout <<"\n Ingrese un numero:";
+   cin>> Num1;
+   cout <<"\n Ingrese otro numero:";
+   cin >> Num2;
+   Result = Num1 - Num2;
+   cout<<"\n La respuesta es: "<<Result<<endl;
+}
+else
+      if(opcion==3)
+      {
+      	system("cls");
+   cout <<"\n Usted realizara una DIVICION"<<endl;
+   cout <<"\n Ingrese un numero:";
+   cin>> Num1;
+   cout <<"\n Ingrese otro numero:";
+   cin >> Num2;
+   	if(Num2 !=0)
+
+     Result = Num1 / Num2;
+     	if(Num2 !=0)
+     cout<<"\n La respuesta es: "<<Result<<endl;
+    else
+    cout <<"\n ERROR, no se puede dividir entre 0"<<endl;
+}
+else
+      if(opcion==4)
+      {
+      	system("cls");
+  cout <<"\n Usted realizara una MULTIPLICACION"<<endl;
+   cout <<"\n Ingrese un numero:";
+   cin>> Num1;
+   cout <<"\n Ingrese otro numero:";
+   cin >> Num2;
+   Result = Num1 * Num2;
+   cout<<"\n La respuesta es: "<<Result<<endl;
+}
+else
+ if(opcion==5)
+      {
+      	system("cls");
+  cout <<"\n si quiere salir preione 5"<<endl;
+   cin>> salir;
+   if(salir !=5)
+   getch();
+   cout <<"\n presione cualquier tecla"<<endl;
+   	return 0;   
+}
+{
+cout <<"\n **precione una tecla para realizar otra operaion**"<<endl;
+getch();
+system("cls");
+	return main();
+}  	
+}

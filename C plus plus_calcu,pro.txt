@@ -1,0 +1,146 @@
+Este codigo da el resultado de las 4 operaciones basicas y tambien por separado, REALIZADO en el programa "Dev-C++"
+
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main(){
+float Can1, Can2, opcion, Resp, Sum, Rest, Mult, Div;
+cout<<"Pulse 1 para realizar las 4 operaciones basicas"<<endl;
+cout<<"Pulse 2 para realizar solo una Suma"<<endl;
+cout<<"Pulse 3 para realizar solo una Resta"<<endl;
+cout<<"Pulse 4 para realizar solo una Multiplicacion"<<endl;
+cout<<"Pulse 5 para realizar solo una Divicion"<<endl;
+cout<<"Pulse 6 para Salir"<<endl;
+cout<<"\nQue desea realizar -> ";
+cin>>opcion;
+
+
+	if(opcion<1 || opcion>6)
+	{
+	cout <<"\nEste numero no tiene funcion, solo precione 1,2,3,4,5,6";
+	}
+	
+	
+else if(opcion==1)
+{system("cls");
+	cout<<"\nUsted realizara las 4 operaciones basicas\n";
+	cout<<"\nIngrese primera cantidad -> ";
+	cin>>Can1;
+	cout<<"Ingrese segunda cantidad -> ";
+	cin>>Can2;
+	Sum = Can1 + Can2;
+	Rest = Can1 - Can2;
+	Mult = Can1 * Can2;
+	Div = Can1 / Can2;
+	cout<<"\n<RESULTADO>";
+	cout<<"\nSuma = "<<Sum<<endl;
+		cout<<"Resta = "<<Rest<<endl;
+			cout<<"Multiplicacion = "<<Mult<<endl;
+				cout<<"Divicion = "<<Div<<endl;
+	
+	cout<<"\nPrecione <1> para regresar o <2> para salir = ";
+	cin>>opcion;
+	if(opcion==1){
+	system("cls");
+	return main();
+}
+	else if(opcion==2){
+	cout<<"\nPrecione cualquier TECLA dos veces";
+	getch();
+	return 0;}}
+//////////////////////////////////////////////////////////////////////
+	else if(opcion==2)
+{system("cls");
+cout<<"\nUsted realizara una SUMA\n";
+cout<<"\nIngrese primera cantidad -> ";
+	cin>>Can1;
+	cout<<"Ingrese segunda cantidad -> ";
+	cin>>Can2;
+	Resp = Can1 + Can2;
+		cout<<"\n<RESULTADO>";
+	cout<<"\nSuma = "<<Resp<<endl;
+	
+	cout<<"\nPrecione <1> para regresar o <2> para salir = ";
+	cin>>opcion;
+	if(opcion==1){
+	system("cls");
+	return main();
+}
+	else if(opcion==2){
+	cout<<"\nPrecione cualquier TECLA dos veces";
+	getch();
+	return 0;}}
+//////////////////////////////////////////////////////////////////////
+	else if(opcion==3)
+{system("cls");
+cout<<"\nUsted realizara una RESTA\n";
+	cout<<"\nIngrese primera cantidad -> ";
+	cin>>Can1;
+	cout<<"Ingrese segunda cantidad -> ";
+	cin>>Can2;
+	Resp = Can1 - Can2;
+		cout<<"\n<RESULTADO>";
+	cout<<"\nResta = "<<Resp<<endl;
+	
+	cout<<"\nPrecione <1> para regresar o <2> para salir = ";
+	cin>>opcion;
+	if(opcion==1){
+	system("cls");
+	return main();
+}
+	else if(opcion==2){
+	cout<<"\nPrecione cualquier TECLA dos veces";
+	getch();
+	return 0;}}
+//////////////////////////////////////////////////////////////////////	
+	else if(opcion==4)
+{system("cls");
+cout<<"\nUsted realizara una MULTIPLICACION\n";
+	cout<<"\nIngrese primera cantidad -> ";
+	cin>>Can1;
+	cout<<"Ingrese segunda cantidad -> ";
+	cin>>Can2;
+	Resp = Can1 * Can2;	
+		cout<<"\n<RESULTADO>";
+	cout<<"\nMultiplicacion = "<<Resp<<endl;
+	
+	cout<<"\nPrecione <1> para regresar o <2> para salir = ";
+	cin>>opcion;
+	if(opcion==1){
+	system("cls");
+	return main();
+}
+	else if(opcion==2){
+	cout<<"\nPrecione cualquier TECLA dos veces";
+	getch();
+	return 0;}}
+//////////////////////////////////////////////////////////////////////	
+	else if(opcion==5)
+{system("cls");
+cout<<"\nUsted realizara una DIVICION\n";
+	cout<<"\nIngrese primera cantidad -> ";
+	cin>>Can1;
+	cout<<"Ingrese segunda cantidad -> ";
+	cin>>Can2;
+	Resp = Can1 / Can2;	
+		cout<<"\n<RESULTADO>";
+	cout<<"\nDivicion = "<<Resp<<endl;
+	
+	cout<<"\nPrecione <1> para regresar o <2> para salir = ";
+	cin>>opcion;
+	if(opcion==1){
+	system("cls");
+	return main();
+}
+	else if(opcion==2){
+	cout<<"\nPrecione cualquier TECLA dos veces";
+	getch();
+	return 0;}}
+//////////////////////////////////////////////////////////////////////	
+else if(opcion==6){
+	system("cls");
+	cout<<"\nPrecione cualquier TECLA dos veces";
+	getch();
+	return 0;}
+}

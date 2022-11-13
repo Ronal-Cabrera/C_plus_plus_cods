@@ -1,0 +1,62 @@
+//libreria principal
+#include<iostream>
+using namespace std;
+
+int main()
+{
+//variables de tipo entero
+int opcion, numero, valor, inicial, Divisores, Cant, top = 0;{
+	
+  //Pedir un numero y guardarlo en cin.
+  cout<<"\n Introduce un numero -> "; 
+  cin>>numero;
+  
+//blucle con for para la verificacion si es numero primo o no 
+for(valor=1; valor <= numero; valor++){
+inicial=numero%valor;
+//if para declarar una condicion
+if(inicial==0)
+//codigo para detener el bucle
+top ++;
+
+    //if para otra declaracion
+    if(top > 2)
+    break;}
+    
+//if para otra condicion
+if(top == 2)
+
+    //si el numero agregado cumple las condiciones
+    //se dara un mensaje de que el numero es primo
+    cout<<"\n El numero es primo\n";
+    // de lo contrario
+    else{
+    //dira que el numero no es primo y dara sus divisores
+    cout<<"\n El numero no es primo\n";
+    
+//texto para dar sus divisores
+cout<<"\n sus devisores son: ";
+
+//bucle para buscar los divisores de el numero que no es primo
+for (Divisores = 1; Divisores <= numero; Divisores = Divisores + 1){
+Cant = numero%1;
+//if para dar una condicion
+if(Cant == 0){
+//pondra en pantalla sus divisores
+cout<<" "<<Divisores<<" ";}}}}
+   
+   //codigo para dar dos opciones, regresar al menu o salir directamente.
+	cout<<"\n\n\n Precione <1> para ingresar otro numero o <2> para salir = ";
+	cin>>opcion;
+	
+   //opcion 1 para regresar al menu.
+   if(opcion==1){
+   system("cls");
+   return main();}
+    
+   //opcion dos para salir directamente por cualquier motivo que tenga.
+   else if(opcion==2){
+   system("Cls");
+   cout<<"\n Precione cualquier TECLA\n";
+   return 0;}
+}

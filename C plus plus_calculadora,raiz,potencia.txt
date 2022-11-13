@@ -1,0 +1,70 @@
+
+
+#include <iostream>
+#include <conio.h>
+#include <math.h>
+using namespace std;
+int main()
+{
+	float opcion;
+	int salir;
+	{
+	cout<<"\n"<<endl;
+	cout <<" Escribir\n";
+   cout <<" 1 si desea sacar raíz cuadrada,\n 2 si desea elevarla a una potencia,\n"<<endl;
+   cout <<" 3 para SALIR"<<endl;
+   cout <<"\n Que desea realizar? ";
+  cin >> opcion;
+   }
+////////////////////////////////////////////////////////////////////////////////////////////////
+   
+   if(opcion < 1){ 
+   system("Cls");
+    cout <<"\n solo puede seleccionar 1, 2, 3"<<endl;}
+else
+   if(opcion > 3){ 
+   system("Cls");
+    cout <<"\n solo puede seleccionar 1, 2, 3"<<endl;}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+else
+   if(opcion == 1){
+   	system("Cls");
+   	float raiz, Num1;
+cout<<"Ingrese un numero"<<endl;
+cin>>Num1;
+raiz = sqrt(Num1);
+ 
+cout<<"La raiz cuadrada es "<<raiz<<endl;}
+	
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+else
+   if(opcion == 2){
+   	system("Cls");
+   	float potencia, Num1, Num2;
+cout<<"Ingrese un numero"<<endl;
+cin>>Num1;
+cout<<"Ingrese la potencia"<<endl;
+cin>>Num2;
+potencia =pow(Num1,Num2);
+cout<<"La potencia es "<<potencia<<endl;}
+	
+////////////////////////////////////////////////////////////////////////////////////////////////	
+	
+	else
+ if(opcion == 3){
+      	system("cls");
+   cout <<"\n presione cualquier tecla"<<endl;
+   	return 0;   }
+   	
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+{
+cout <<"\n\n Precione una tecla para regresar al menu"<<endl;
+getch();
+system("cls");
+	return main();
+}
+}

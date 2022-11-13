@@ -1,0 +1,136 @@
+/*Este codigo fue hecho en Dev-C++ y funciono correctamente.
+IMPORTANTE.
+Para que este codigo funcione sin modificar nada debe crear y guardar el proyecto en el Escritorio, ya que ahi se creará el archivo txt
+y ahi lo buscara el programa.*/
+
+//libreria principal
+#include <iostream>
+
+//libreria nesesaria para la creacion de archivo txt y leer su contenido.
+#include <fstream>
+
+using namespace std;
+int main(){
+	
+	//Este es el codigo para el menu, utilizando dos variables.
+	int opcion, salir;
+	cout <<"\n"<<endl;
+	cout <<" Escribir\n";
+	
+//Las opciones que puedes escoger.
+cout <<" 1 para crear archivo Txt";
+cout <<"\n 2 para leer y dar informacion del archivo Txt,\n"<<endl;
+cout <<" 3 para SALIR"<<endl;
+cout <<"\n Que desea realizar? ";
+
+    //cin para guardar la informacion que escojas.
+    cin >> opcion;
+   
+////////////////////////////////////////////////////////////////////////////////////////////////
+                                                                                        
+   //una condicion if para decirte que solo puedes escoger esas tres opciones.
+   if(opcion < 1 || opcion > 3){  
+   //System para desaparecer el menu y solo motras la funcion de este if.                                     
+   system("Cls");    
+   //mensaje de aviso diciendote que solo debes selecionar del 1 al 3.                                                                      
+   cout <<"\n solo puede seleccionar 1, 2, 3"<<endl;}                                     
+                                                                                           
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //utilizando if, esta sera la opcion 1.
+	else if(opcion == 1){    
+	   
+//system para desaparecer el menu mostrando solo la funcion 1
+system("Cls");   
+           
+    //mostrando tamaño de la cadena de texto.
+	char cadena[128]; 
+	//una variable tipo entero.         
+	int numero;
+	
+//codigo para colocar nombre de el archivo txt que se creará.
+ofstream file;
+ofstream fs("Carpeta.txt");
+
+	//con esto se imprime una oracion dentro de el archivo txt.
+	fs<<" Bienvenido a la carpeta"<<endl;
+	fs.close();
+	ifstream fe("Carpeta.txt");
+	fe.getline(cadena,128);
+	
+//codigo que imprimirá en pantalla una breve explicacion del archivo txt.
+cout<<"\n Archivo txt creado con el nombre de <Carpeta>"<<endl;
+cout<<" El archivo estara ubicado en donde guardo el proyecto"<<endl;
+	
+	//codigo para dar dos opciones, regresar al menu o salir directamente.
+	cout<<"\nPrecione <1> para regresar o <2> para salir = ";
+	cin>>opcion;
+	
+//opcion 1 para regresar al menu.
+if(opcion==1){
+system("cls");
+return main();}
+    
+//opcion dos para salir directamente por cualquier motivo que tenga.
+else if(opcion==2){
+cout<<"\nPrecione cualquier TECLA dos veces";
+return 0;}}
+	
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+	//opcion dos utilizando funion if.
+	else if(opcion == 2){
+		
+//system para desaparecer menu y mostrar solo la ejeccion de la opcion 2, lector de archivo txt.
+system("Cls");
+char cadena[128];
+char cadenas[128];
+
+    //codigo para localizar el archivo txt mediante ruta.
+    ifstream fe("C:/Users/RCP steve/Desktop/Carpeta.txt"); //esta es la ruta del Escritorio, donde se guardo el proyeto
+    
+//si se encuentra el archivo se ejecutara lo siguiente.
+if(!fe.eof()){
+	
+    //se verificara lo que contiene el archivo txt
+	fe.getline(cadena,128);
+	//se guardara en cadena
+	fe>>cadena;
+    if(fe.eof()){
+    cout<<"\n El archivo txt, contiene la siguiente oracion\n"<<endl;
+    //se imprimira en pantalla lo que contiene el archivo txt.
+    cout<<cadena<<endl;
+    //diciendo que tiene 4 palabras.
+    cout<<" este archivo tiene 4 palabras\n"<<endl;}
+    
+//si no se encuentra el archivo txt se anunciara los siguinte.
+else
+//un pequeño comentario diciendo que no hay archivo txt y debes crearlo.
+cout<<"No existe ningun archivo, primero debes crear uno"<<endl;}
+fe.close();
+	
+	//codigo para dar dos opciones, regresar al menu o salir directamente.
+	cout<<"\nPrecione <1> para regresar o <2> para salir = ";
+	cin>>opcion;
+	//opcion 1 para regresar al menu.
+	if(opcion==1){
+	system("cls");
+	return main();
+    }
+    //opcion dos para salir directamente por cualquier motivo que tenga.
+	else if(opcion==2){
+	cout<<"\nPrecione cualquier TECLA dos veces";
+	return 0;}
+	}
+	
+////////////////////////////////////////////////////////////////////////////////////////////////	
+	
+	//codigo de la opcion 3 para salir del programa desde el menu
+	else if(opcion == 3){
+	//system para desaparecer el menu y dar un texto.
+    system("cls");
+    cout <<"\n presione cualquier tecla"<<endl;
+    return 0;   }
+   	}
+   	
+////////////////////////////////////////////////////////////////////////////////////////////////
